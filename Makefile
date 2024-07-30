@@ -50,7 +50,7 @@ docker-clean:
 	
 .PHONY: docker-build
 docker-build: minimize 
-	docker build -f images/Dockerfile -t $(IMAGE_LINK) .
+	docker build -f Dockerfile -t $(IMAGE_LINK) .
 
 .PHONY: docker-push
 docker-push: docker-build
