@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"log"
-	"math"
 	"os"
 	"time"
 )
@@ -33,12 +32,12 @@ func load(args *Args) {
 
 func main() {
 	var timeout *int = flag.Int("timeout", 10, "seconds")
-	var size *int = flag.Int("size", math.MaxInt, "buffer size")
+	var size *int = flag.Int("size", 1000000000, "buffer size")
 	var actors *int = flag.Int("actors", 1, "actors")
 
 	flag.Parse()
 	log.Printf("begin timeout: %d, buffer size: %d, actors: %d", *timeout, *size, *actors)
-	
+
 	args := &Args{
 		timeout: *timeout,
 		size:    *size,
