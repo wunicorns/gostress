@@ -5,7 +5,7 @@ HOSTGO := env -u GOOS -u GOARCH -u GOARM -- go
 LDFLAGS := $(LDFLAGS)
 
 VERSION ?= latest
-PROJECT ?= stress
+PROJECT ?= gostress
 REPOSITORY ?= quay.io/caspell
 IMAGE_LINK = $(REPOSITORY)/$(PROJECT):$(VERSION)
 
